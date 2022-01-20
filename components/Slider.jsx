@@ -7,15 +7,15 @@ import slider3 from '../assests/images/slider-1.jpg'
 export default function Slider() {
     return (
         <>
-            <Box w="100%" p="3" border="1pt solid">
+            <Box w="100%" p="3"  position='relative'>
 
                 <Flex flexDirection="row" justifyContent="space-between">
-                    <BsArrowLeft />
-                    <Flex>
-                        <Box w="full" h="40">
-                            <Image src={slider1} width="100%" height="100%" layout="responsive" objectFit="cover" alt="slider_image" />
-                            <Image src={slider1} width="100%" height="100%" layout="responsive" objectFit="cover" alt="slider_image" />
-                            <Image src={slider1} width="100%" height="100%" layout="responsive" objectFit="cover" alt="slider_image" />
+                    <BsArrowLeft position='absolute' border='1pt solid' zIndex="2" top="120px"/>
+                    <Flex flexDirection='row' >
+                        <Box w="full" h="400" >
+                            <Image src={slider1}  layout="fill" objectFit="cover" alt="slider_image" />
+                            <Image src={slider1}  layout="fill" objectFit="cover" alt="slider_image" />
+                            <Image src={slider1}  layout="fill" objectFit="cover" alt="slider_image" />
                         </Box>
                     </Flex>
                     <BsArrowRight />
