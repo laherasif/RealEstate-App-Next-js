@@ -1,21 +1,24 @@
 import { Box, Flex, Menu ,  MenuButton, MenuList, MenuItem, Spacer, IconButton } from '@chakra-ui/react'
 import Link from 'next/link'
+import {FcMenu} from 'react-icons/fc'
+import { BsSearch } from 'react-icons/bs'
+import { AiFillHome } from 'react-icons/ai'
 const Navbar = () => {
     return (
-        <Flex p='2' borderBottom='1px' borderColor='gray.100'>
+        <Flex p='4' borderBottom='1px' borderColor='gray.100'>
             <Box fontSize='3xl' color='blue.400' fontWeight='bold'>
                 <Link href='/' paddingLeft='2'>Realtor</Link>
             </Box>
             <Spacer />
             <Box>
                 <Menu>
-                    {/* <MenuButton as={IconButton} icon={<FcMenu />} variant='outline' color='red.400' /> */}
+                    <MenuButton as={IconButton} icon={<FcMenu />} variant='outline' color='red.400' />
                     <MenuList>
                         <Link href='/' passHref>
-                            <MenuItem >Home</MenuItem>
+                            <MenuItem icon={<AiFillHome/>} >Home</MenuItem>
                         </Link>
                         <Link href='/search' passHref>
-                            <MenuItem >Search</MenuItem>
+                            <MenuItem icon={<BsSearch/>} >Search</MenuItem>
                         </Link>
                         <Link href='/search?purpose=for-sale' passHref>
                             <MenuItem >Buy Property</MenuItem>
