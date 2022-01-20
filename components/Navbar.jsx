@@ -1,6 +1,6 @@
 import { Box, Flex, Menu ,  MenuButton, MenuList, MenuItem, Spacer, IconButton } from '@chakra-ui/react'
 import Link from 'next/link'
-import {FcMenu} from 'react-icons/fc'
+import {FcMenu , FcAbout , FcKey} from 'react-icons/fc'
 import { BsSearch } from 'react-icons/bs'
 import { AiFillHome } from 'react-icons/ai'
 const Navbar = () => {
@@ -21,10 +21,10 @@ const Navbar = () => {
                             <MenuItem icon={<BsSearch/>} >Search</MenuItem>
                         </Link>
                         <Link href='/search?purpose=for-sale' passHref>
-                            <MenuItem >Buy Property</MenuItem>
+                            <MenuItem icon={<FcAbout/>Buy Property</MenuItem>
                         </Link>
                         <Link href='/search?purpose=for-rent' passHref>
-                            <MenuItem >Rent Property</MenuItem>
+                            <MenuItem icon={<FcKey/>}>Rent Property</MenuItem>
                         </Link>
                     </MenuList>
                 </Menu>
