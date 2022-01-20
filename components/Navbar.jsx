@@ -5,7 +5,7 @@ import { BsSearch } from 'react-icons/bs'
 import { AiFillHome } from 'react-icons/ai'
 const Navbar = () => {
     return (
-        <Flex p='4' borderBottom='1px' borderColor='gray.100' marginBottom='20rem'>
+        <Flex p='4' borderBottom='1px' borderColor='gray.100' zIndex='2'>
             <Box fontSize='3xl' color='blue.400' fontWeight='bold'>
                 <Link href='/' paddingLeft='3'>Realtor</Link>
             </Box>

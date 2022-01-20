@@ -13,7 +13,9 @@ export default function Slider() {
                     <BsArrowLeft />
                     <Flex>
                         <Box w="full" h="40">
-                            <Image src={slider1} layout="fill" objectFit="cover" alt="slider_image" />
+                            <Image src={slider1} width="100%" height="100%" layout="responsive" objectFit="cover" alt="slider_image" />
+                            <Image src={slider1} width="100%" height="100%" layout="responsive" objectFit="cover" alt="slider_image" />
+                            <Image src={slider1} width="100%" height="100%" layout="responsive" objectFit="cover" alt="slider_image" />
                         </Box>
                     </Flex>
                     <BsArrowRight />
