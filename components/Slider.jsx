@@ -1,17 +1,22 @@
 import { Box, Flex } from '@chakra-ui/react'
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs'
+import Image from 'next/image'
+import slider1 from '../assests/images/slider-1.jpg'
+import slider2 from '../assests/images/slider-1.jpg'
+import slider3 from '../assests/images/slider-1.jpg'
 export default function Slider() {
     return (
         <>
             <Box w="100%" p="3" border="1pt solid">
 
-                <Flex>
+                <Flex flexDirection="row" justifyContent="space-between">
                     <BsArrowLeft />
-
-                    <Box>
-
-                    </Box>
-                    <BsArrowRight/>
+                    <Flex>
+                        <Box w="full" h="40">
+                            <Image src={slider1} layout="fill" objectFit="cover" alt="slider_image" />
+                        </Box>
+                    </Flex>
+                    <BsArrowRight />
 
                 </Flex>
             </Box>
