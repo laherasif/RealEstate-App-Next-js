@@ -2,8 +2,8 @@ import { Box, Flex } from '@chakra-ui/react'
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs'
 import Image from 'next/image'
 import slider1 from '../assests/images/slider-1.jpg'
-import slider2 from '../assests/images/slider-1.jpg'
-import slider3 from '../assests/images/slider-1.jpg'
+import slider2 from '../assests/images/slider-2.jpg'
+import slider3 from '../assests/images/slider-3.jpg'
 export default function Slider() {
     return (
         <>
@@ -14,8 +14,12 @@ export default function Slider() {
                     <Flex flexDirection='row' >
                         <Box w="full" h="400" >
                             <Image src={slider1}  layout="fill" objectFit="cover" alt="slider_image" />
-                            <Image src={slider1}  layout="fill" objectFit="cover" alt="slider_image" />
-                            <Image src={slider1}  layout="fill" objectFit="cover" alt="slider_image" />
+                        </Box>
+                        <Box w="full" h="400" >
+                            <Image src={slider2}  layout="fill" objectFit="cover" alt="slider_image" />
+                        </Box>
+                        <Box w="full" h="400" >
+                            <Image src={slider3}  layout="fill" objectFit="cover" alt="slider_image" />
                         </Box>
                     </Flex>
                     <BsArrowRight />
