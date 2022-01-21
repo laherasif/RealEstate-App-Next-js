@@ -135,6 +135,7 @@ export const filterData = [
   ];
   
   export const getFilterValues = (filterValues) => {
+    
     const {
       purpose,
       rentFrequency,
