@@ -10,7 +10,7 @@ import { MdCancel } from 'react-icons/md'
 export default function SearchFilterData() {
     const [Filters] = useState(filterData)
     const [search, setSearch] = useState('')
-    const [location, setLocation] = useState()
+    const [location, setLocation] = useState([])
     const [showlocation, setShowLocation] = useState(false)
     const [loader, setLoader] = useState(false)
 
@@ -36,7 +36,7 @@ export default function SearchFilterData() {
                 setLoader(true);
                 const data = await fetchApi(`${baseUrl}/auto-complete?query=${search}`);
                 setLoader(false);
-                setLocation(data ?.hits);
+                setLocation(data?.hits);
             };
 
             fetchData();
@@ -92,7 +92,8 @@ export default function SearchFilterData() {
                                     right="5"
                                     zIndex="2"
                                     cursor="pointer"
-                                    onClick={() => setSearch('')}
+                                    onClick={() => {setSearch('') , setLocation('')}}
+
                                 >
 
                                 </Icon>
@@ -103,8 +104,8 @@ export default function SearchFilterData() {
                     }
                     {loader && <Spinner margin="auto" marginTop="2" color="gray.500" />}
                     {showlocation &&
-                        <Box height="300px" overFlow="auto">
-                            {location ?.map((location) => (
+                        <Box height="200px" overFlowY="scroll">
+                            {location?.map((location) => (
                                 <Box
                                     key={location.id}
                                     onClick={() => {

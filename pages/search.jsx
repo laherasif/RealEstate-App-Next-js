@@ -18,6 +18,7 @@ export default function search({ properties }) {
                 fontSize="xlg"
                 bg="gray.200"
                 onClick={() => setSearchFilter(!searchFilter)}
+                cursor="pointer"
             >
                 <Text>Search Property By Filter </Text>
                 <Icon w="75" marginLeft="2" as={BsFilter} />
