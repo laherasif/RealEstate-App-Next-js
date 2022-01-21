@@ -18,7 +18,7 @@ export default function PropertiesList({ property }) {
                 <Box w="full">
                     <Flex flexWrap="wrap" alignItems="center" justifyContent="space-between">
                         <Flex alignItems="center" >
-                            <Box color="blue.400"><GoVerified /></Box>
+                            <Box color="green.400"><GoVerified /></Box>
                             <Text paddingLeft="2">{millify(20000)}</Text>
                         </Flex>
                         <Box >

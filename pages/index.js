@@ -31,7 +31,7 @@ export default function Home() {
     <Box>
       <Navbar />
       <MianContent />
-      <Flex flexWrap="wrap" >
+      <Flex flexWrap="wrap" justifyContent="center">
         <PropertiesList/>
         <PropertiesList/>
         <PropertiesList/>
@@ -40,7 +40,7 @@ export default function Home() {
         <PropertiesList/>
       </Flex>
       <MianContent />
-      <Flex flexWrap="wrap">
+      <Flex flexWrap="wrap" justifyContent="center">
       <PropertiesList/>
      
       </Flex>
