@@ -8,19 +8,18 @@ import { BsGridFill } from 'react-icons/bs'
 import slider2 from '../assests/images/slider-2.jpg'
 import { millify } from 'millify';
 
-export default function PropertiesList( {property}) {
-    console.log("property" , property )
+export default function PropertiesList({ property: { agency, area, baths, coverPhoto, externalID, price, isVarified } }) {
     return (
         <Link href={`/property/${123}`} passHref>
             <Flex flexWrap='wrap' w='420px' p='5' paddingTop='0px' justifyContent='flex-start' cursor='pointer'>
                 <Box>
-                    <Image src={slider2} width={400} height={260} alt="product_iamg" />
+                    {/* <Image src={coverPhoto ? coverPhoto.url : slider2} width={400} height={260} alt="product_iamg" /> */}
                 </Box>
                 <Box w="full">
                     <Flex flexWrap="wrap" alignItems="center" justifyContent="space-between">
                         <Flex alignItems="center" >
-                            <Box color="green.400"><GoVerified /></Box>
-                            <Text paddingLeft="2">{millify(20000)}</Text>
+                            <Box color="green.400">{isVarified && <GoVerified />}</Box>
+                            <Text paddingLeft="2">{millify(area)}</Text>
                         </Flex>
                         <Box >
                             <Avatar size="sm" src={slider2} />
@@ -29,7 +28,7 @@ export default function PropertiesList( {property}) {
                 </Box>
 
                 <Flex justifyContent="space-between" alignItems="center" p="1" w="250px" color="blue.400">
-                    300 <FaBed /> | 12 <FaBath /> | {millify(3000)} sqrt <BsGridFill />
+                     <FaBed /> | {baths} <FaBath /> | {millify(3000)} sqrt <BsGridFill />
                 </Flex>
                 <Text>
                     {/* { title.length > 30 ?  title.substring(0, 30) + '...'  :  title} */}
