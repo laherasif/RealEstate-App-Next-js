@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from '@chakra-ui/react'
+import { Box, Flex, Text, } from '@chakra-ui/react'
 import { GoVerified } from 'react-icons/go'
 import { FaBed, FaBath } from 'react-icons/fa'
 import { Avatar } from '@chakra-ui/avatar'
@@ -6,7 +6,9 @@ import { BsGridFill } from 'react-icons/bs'
 import slider3 from '../../assests/images/slider-3.jpg'
 import Image from 'next/image'
 import millify from 'millify'
-export default function SingleProduct() {
+import { fetchApi , baseUrl } from '../../ulit/api'
+export default function SingleProduct({property}) {
+    console.log("properties" , property)
     return (
         <Box maxWidth="1000px" margin="auto" p="4">
             <Flex flexWrap='wrap'>
@@ -71,3 +73,14 @@ export default function SingleProduct() {
         </Box>
     )
 }
+
+
+export async function getServerSideProps({params : id }) {
+
+    const data = await fetchApi(`${baseUrl}/properties/detail?locationExternalIDs=${id}`);
+    return {
+      props: {
+        property: data,
+      },
+    };
+  }
