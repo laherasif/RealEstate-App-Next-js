@@ -8,6 +8,11 @@ import { MdCancel} from 'react-icons/md'
 
 export default function SearchFilterData() {
     const [Filters] = useState(filterData)
+    const [search, setSearch] = useState('')
+    const [location, setLocation] = useState()
+    const [showlocation, setShowLocation] = useState(false)
+    const [loader, setLoader] = useState(false)
+
 
     const router = useRouter()
 
@@ -46,7 +51,10 @@ export default function SearchFilterData() {
             })}
             
             <Flex flexDir="column" marginTop="2" >
-                <Button borderColor="gray.400" border="1pt solid">Search By Location </Button>
+                <Button
+                onClick={()=> setShowLocation(!showlocation)}
+                 borderColor="gray.400"
+                  border="1pt solid">Search By Location </Button>
 
                 <Flex flexDir="column" pos="relative" paddingTop="2" >
                     <Input
