@@ -5,6 +5,7 @@ import Image from 'next/image'
 import { Flex, Box, Text, Button } from '@chakra-ui/react'
 import Slider1 from '../assests/images/slider-1.jpg'
 import PropertiesList from '../components/PropertiesList';
+import { baseUrl , fetchApi} from '../ulit/api'
 const MianContent = () => {
   return (
     <>
@@ -48,3 +49,11 @@ export default function Home() {
 
   )
 }
+
+export async function getStaticProps(){
+  // const fetchRentData = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-rent&hitsPerPage=6`)
+  const propertyForSale = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-sale&hitsPerPage=6`);
+
+    
+}
+
