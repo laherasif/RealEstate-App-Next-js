@@ -8,7 +8,7 @@ import { BsGridFill } from 'react-icons/bs'
 import slider2 from '../assests/images/slider-2.jpg'
 import { millify } from 'millify';
 
-export default function PropertiesList({ property :  }) {
+export default function PropertiesList({ property: { coverPhoto, price, rentFrequency, rooms, title, baths, area, agency, isVerified, externalID  } }) {
     return (
         <Link href="/" passHref>
             <Flex flexWrap="wrap" w="420px" p="2">
