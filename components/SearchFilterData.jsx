@@ -56,9 +56,15 @@ export default function SearchFilterData() {
                     <Icon
                      as={MdCancel}
                      pos="absolute"
+                     w='25px'
+                     top="5"
+                     right="5"
+                     zIndex="2"
+                     cursor="pointer"
                     >
 
                     </Icon>
+                    <Spinner margin="auto" marginTop="2" color="gray.500"/>
                 </Flex>
             </Flex>
 
