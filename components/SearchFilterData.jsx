@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { Flex, Box, Button, Icon, Spinner, Select, Input, Text } from '@chakra-ui/react'
 import { filterData, getFilterValues } from '../ulit/filterDataOption'
 import { useRouter } from 'next/router';
+import { MdCancel} from 'react-icons/md'
 
 
 export default function SearchFilterData() {
@@ -13,14 +14,14 @@ export default function SearchFilterData() {
     const searchFilterValue = (filterValue) => {
         const path = router.pathname;
         const { query } = router
-        
+
         const value = getFilterValues(filterValue)
-    
+
         value.forEach(item => {
-             query[item.name] = item.value
+            query[item.name] = item.value
         });
 
-        router.push({ pathname : path , query })
+        router.push({ pathname: path, query })
     }
     return (
         <Flex bg='gray.100' p='4' flexWrap="wrap" justifyContent="center"  >
@@ -43,8 +44,22 @@ export default function SearchFilterData() {
                     </Box>
                 )
             })}
-            <Flex flexDir="column" >
-            <Button borderColor="gray.400">Search By Location </Button>
+            <Flex flexDir="column" marginTop="2" >
+                <Button borderColor="gray.400" border="1pt solid">Search By Location </Button>
+
+                <Flex flexDir="column" pos="relative" paddingTop="2" >
+                    <Input
+                        w="300px"
+                        focusBorderColor="gray.400"
+                        placeholder="seach by location "
+                    />
+                    <Icon
+                     as={MdCancel}
+                     pos="absolute"
+                    >
+
+                    </Icon>
+                </Flex>
             </Flex>
 
 
