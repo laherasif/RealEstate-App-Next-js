@@ -10,8 +10,8 @@ const MianContent = () => {
       <Image src={Slider1} width={100} height={50} alt="main_image" />
       <Flex flexDirection="column" p="5">
         <Text color="gray.400" fontWeight="medium" fontSize="sm">Explore more </Text>
-        <Text fontSize="3xl" >Explore more </Text>
-        <Text>Explore more </Text>
+        <Text fontSize="3xl" fontWeight="bold">Explore more <br/> titlte 2 </Text>
+        <Text paddingTop="2" paddingBottom="2" fontSize="lg" color="gray.700" >Explore more </Text>
         <Button>more</Button>
       </Flex>
     </Flex>
