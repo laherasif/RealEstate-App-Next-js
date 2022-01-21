@@ -27,7 +27,7 @@ const MianContent = () => {
 }
 
 
-export default function Home() {
+const Home = () =>  {
   return (
     <Box>
       <MianContent />
@@ -50,10 +50,17 @@ export default function Home() {
   )
 }
 
-export async function getStaticProps(){
-  // const fetchRentData = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-rent&hitsPerPage=6`)
+export async function getStaticProps() {
   const propertyForSale = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-sale&hitsPerPage=6`);
-
-    
+  const propertyForRent = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-rent&hitsPerPage=6`);
+     console.log("rent" , propertyForSale)
+  // return {
+  //   props: {
+  //     propertiesForSale: propertyForSale?.hits,
+  //     propertiesForRent: propertyForRent?.hits,
+  //   },
+  // };
 }
+
+export default Home
 
