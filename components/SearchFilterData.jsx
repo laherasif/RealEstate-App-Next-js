@@ -44,6 +44,7 @@ export default function SearchFilterData() {
                     </Box>
                 )
             })}
+            
             <Flex flexDir="column" marginTop="2" >
                 <Button borderColor="gray.400" border="1pt solid">Search By Location </Button>
 
@@ -65,6 +66,17 @@ export default function SearchFilterData() {
 
                     </Icon>
                     <Spinner margin="auto" marginTop="2" color="gray.500"/>
+
+                    <Box height="300px" overFlow="auto">
+                      <Box>
+                          <Text cursor="pointer" borderBottom="1pt solid" borderColor="gray.100" >location name here</Text>
+                      </Box>
+                       
+                       <Flex justifyContent="center" flexDir="column" alignItems="center">
+                          <Text>Waiting for search </Text>
+                       </Flex>
+
+                    </Box>
                 </Flex>
             </Flex>
 
