@@ -26,9 +26,7 @@ const MianContent = () => {
   )
 }
 
-
 const Home = ({ propertiesForRent, propertiesForSale }) => {
-  console.log("rent  ", propertiesForRent, )
   return (
     <Box>
       <MianContent />
@@ -63,8 +61,8 @@ export async function getStaticProps() {
   const propertyForRent = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-rent&hitsPerPage=6`);
   return {
     props: {
-      propertiesForSale: propertyForSale ?.hits,
-      propertiesForRent: propertyForRent ?.hits,
+      propertiesForSale: propertyForSale.hits,
+      propertiesForRent: propertyForRent.hits,
     },
   };
 }
