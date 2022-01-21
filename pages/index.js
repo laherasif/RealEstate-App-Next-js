@@ -31,11 +31,16 @@ export default function Home() {
     <Box>
       <Navbar />
       <MianContent />
-      <Flex>
+      <Flex flexWrap="wrap" >
+        <PropertiesList/>
+        <PropertiesList/>
+        <PropertiesList/>
+        <PropertiesList/>
+        <PropertiesList/>
         <PropertiesList/>
       </Flex>
       <MianContent />
-      <Flex>
+      <Flex flexWrap="wrap">
       <PropertiesList/>
      
       </Flex>
