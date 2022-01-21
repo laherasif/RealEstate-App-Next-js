@@ -43,7 +43,7 @@ export default function ImageScroll() {
 
     return (
             <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
-
+                
             </ScrollMenu>
     )
 }

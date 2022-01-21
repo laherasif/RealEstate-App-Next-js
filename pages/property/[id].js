@@ -25,19 +25,48 @@ export default function SingleProduct() {
                     </Flex>
                 </Box>
 
+
+
                 <Flex justifyContent="space-between" alignItems="center" p="1" w="250px" color="blue.400">
                     300 <FaBed /> | 12 <FaBath /> | {millify(3000)} sqrt <BsGridFill />
                 </Flex>
-                <Text>
-                    {/* { title.length > 30 ?  title.substring(0, 30) + '...'  :  title} */}
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique fugiat aut voluptates deleniti nostrum cumque molestias architecto saepe, omnis debitis, laboriosam, quidem corporis corrupti autem provident ut numquam excepturi. Distinctio.
-                </Text>
-                 <Text>
-                    {/* { title.length > 30 ?  title.substring(0, 30) + '...'  :  title} */}
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique fugiat aut voluptates deleniti nostrum cumque molestias architecto saepe, omnis debitis, laboriosam, quidem corporis corrupti autem provident ut numquam excepturi. Distinctio.
-                </Text>
 
             </Flex>
+
+
+            <Box marginTop="30">
+                <Text fontSize='lg' marginBottom='2' fontWeight='bold'>title</Text>
+                <Text lineHeight='2' color='gray.600'>hello des</Text>
+            </Box>
+
+            <Flex flexWrap='wrap' textTransform='uppercase' justifyContent='space-between'>
+                <Flex justifyContent='space-between' w='400px' borderBottom='1px' borderColor='gray.100' p='3'>
+                    <Text>Type</Text>
+                    <Text fontWeight='bold'>type</Text>
+                </Flex>
+                <Flex justifyContent='space-between' w='400px' borderBottom='1px' borderColor='gray.100' p='3'>
+                    <Text>Purpose</Text>
+                    <Text fontWeight='bold'>purpose</Text>
+                </Flex>
+                <Flex justifyContent='space-between' w='400px' borderBottom='1px' borderColor='gray.100' p='3' >
+                    <Text>Furnishing Status</Text>
+                    <Text fontWeight='bold'>furnishingStatus</Text>
+                </Flex>
+
+
+            </Flex>
+
+            <Box>
+                <Text fontSize='2xl' fontWeight='black' marginTop='5'>Facilites:</Text>
+                <Flex flexWrap='wrap'>
+                    <Text fontWeight='bold' color='blue.400' fontSize='l' p='2' bg='gray.200' m='1' borderRadius='5'>
+                        helow
+                                    </Text>
+                </Flex>
+            </Box>
+
+
+
 
         </Box>
     )
