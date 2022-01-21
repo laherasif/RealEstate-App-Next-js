@@ -9,8 +9,8 @@ const MianContent = () => {
     <Flex flexWrap="wrap" justifyContent="center" textAlign="center" p="2">
       <Image src={Slider1} width={100} height={50} alt="main_image" />
       <Flex flexDirection="column" p="5">
-        <Text color="gray.400" fontWeight="500">Explore more </Text>
-        <Text>Explore more </Text>
+        <Text color="gray.400" fontWeight="medium" fontSize="sm">Explore more </Text>
+        <Text fontSize="3xl" >Explore more </Text>
         <Text>Explore more </Text>
         <Button>more</Button>
       </Flex>
