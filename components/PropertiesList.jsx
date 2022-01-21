@@ -8,31 +8,30 @@ import { BsGridFill } from 'react-icons/bs'
 import slider2 from '../assests/images/slider-2.jpg'
 import { millify } from 'millify';
 
-export default function PropertiesList({ property: { agency, area, baths, coverPhoto, externalID, price, isVarified } }) {
+export default function PropertiesList({ property: { agency, rentFrequency , area, baths, rooms , title ,  coverPhoto, externalID, price, isVarified } }) {
     return (
         <Link href={`/property/${123}`} passHref>
             <Flex flexWrap='wrap' w='420px' p='5' paddingTop='0px' justifyContent='flex-start' cursor='pointer'>
                 <Box>
-                    {/* <Image src={coverPhoto ? coverPhoto.url : slider2} width={400} height={260} alt="product_iamg" /> */}
+                <Image src={coverPhoto ? coverPhoto.url : slider2} width={400} height={260} />
                 </Box>
                 <Box w="full">
                     <Flex flexWrap="wrap" alignItems="center" justifyContent="space-between">
                         <Flex alignItems="center" >
                             <Box color="green.400">{isVarified && <GoVerified />}</Box>
-                            <Text paddingLeft="2">{millify(area)}</Text>
+                            <Text paddingLeft="2">PKR {price} {rentFrequency && `/${rentFrequency}`}</Text>
                         </Flex>
                         <Box >
-                            <Avatar size="sm" src={slider2} />
+                            <Avatar size="sm" src={agency?.logo?.url} />
                         </Box>
                     </Flex>
                 </Box>
 
                 <Flex justifyContent="space-between" alignItems="center" p="1" w="250px" color="blue.400">
-                     <FaBed /> | {baths} <FaBath /> | {millify(3000)} sqrt <BsGridFill />
+                    {rooms} <FaBed /> | {baths} <FaBath /> | {millify(area)} sqrt <BsGridFill />
                 </Flex>
                 <Text>
-                    {/* { title.length > 30 ?  title.substring(0, 30) + '...'  :  title} */}
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique fugiat aut voluptates deleniti nostrum cumque molestias architecto saepe, omnis debitis, laboriosam, quidem corporis corrupti autem provident ut numquam excepturi. Distinctio.
+                    { title.length > 30 ?  title.substring(0, 30) + '...'  :  title}
             </Text>
 
             </Flex>
