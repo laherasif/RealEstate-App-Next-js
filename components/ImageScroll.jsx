@@ -26,7 +26,7 @@ export default function ImageScroll() {
           )
       }
 
-      const LeftRight = () =>{
+      const RightArrow = () =>{
         const { scrollNext } = useContext(VisibilityContext)
 
         return (
@@ -43,7 +43,9 @@ export default function ImageScroll() {
 
     return (
             <ScrollMenu LeftArrow={LeftArrow} RightArrow={RightArrow}>
-                
+            <Flex>
+                <Text>hellow</Text>
+            </Flex>
             </ScrollMenu>
     )
 }
