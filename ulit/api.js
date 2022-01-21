@@ -3,6 +3,7 @@ import axios from 'axios'
 export const baseUrl = 'https://bayut.p.rapidapi.com/properties/list'
 
 export const fetchApi = async (url) => {
+    console.log("url" , url )
     let {data} = await axios.get(url, {
         headers: {
             'x-rapidapi-host': 'bayut.p.rapidapi.com',
