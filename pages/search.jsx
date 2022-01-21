@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 import SearchFilterData from '../components/SearchFilterData'
 import PropertiesList from '../components/PropertiesList';
 export default function search() {
-    const [searchFilter, setSearchFilter] = useState(false)
+    const [searchFilter, setSearchFilter] = useState()
     const router = useRouter()
     console.log("router", router)
     return (
@@ -17,7 +17,7 @@ export default function search() {
                 p="2"
                 fontSize="xlg"
                 bg="gray.200"
-                onClick={(prv) => setSearchFilter(!prv)}
+                onClick={() => setSearchFilter(!searchFilter)}
             >
                 <Text>Search Property By Filter </Text>
                 <Icon w="75" marginLeft="2" as={BsFilter} />

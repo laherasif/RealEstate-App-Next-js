@@ -29,7 +29,6 @@ const MianContent = () => {
 export default function Home() {
   return (
     <Box>
-      <Navbar />
       <MianContent />
       <Flex flexWrap="wrap" justifyContent="center">
         <PropertiesList/>
