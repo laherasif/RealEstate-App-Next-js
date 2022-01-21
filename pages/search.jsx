@@ -4,9 +4,11 @@ import { BsFilter } from 'react-icons/bs'
 import { useRouter } from 'next/router';
 
 import SearchFilterData from '../components/SearchFilterData'
+import PropertiesList from '../components/PropertiesList';
 export default function search() {
     const [searchFilter, setSearchFilter] = useState(false)
     const router = useRouter()
+    console.log("router", router)
     return (
         <Box>
             <Flex justifyContent="center"
@@ -23,9 +25,19 @@ export default function search() {
 
             {searchFilter && <SearchFilterData />}
 
-            <Text fontSize="2xl" p="2">
-                Property {router.query.params}
+            <Text fontSize="2xl" p="2" fontWeight="bold">
+                Property {router.query.purpose}
             </Text>
+            <Flex flexWrap="wrap">
+                {[].map((property) => <PropertiesList property={property} key={property.id} />)}
+            </Flex>
+
+            {[].length === 0 && (
+                <Text textAlign="center" fontSize="xl" fontWeight='medium'>
+                    No Properties Here
+                </Text>
+
+            )}
 
 
         </Box>

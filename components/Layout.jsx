@@ -3,16 +3,16 @@ import { Box } from '@chakra-ui/react'
 
 import Navbar from './Navbar'
 
-export default function Layout() {
+export default function Layout({children}) {
     return (
         <>
             <Head>
                 <title>Real Estate App</title>
             </Head>
-            <Box w="1280px">
-                <head>
+            <Box maxWidth="1280px" m="auto">
+                <header>
                     <Navbar />
-                </head>
+                </header>
                 <main>
                     {children}
                 </main>
