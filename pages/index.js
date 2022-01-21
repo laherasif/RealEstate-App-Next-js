@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { Flex, Box, Text, Button } from '@chakra-ui/react'
 import Slider1 from '../assests/images/slider-1.jpg'
 import PropertiesList from '../components/PropertiesList';
-import { baseUrl , fetchApi} from '../ulit/api'
+import { baseUrl, fetchApi } from '../ulit/api'
 const MianContent = () => {
   return (
     <>
@@ -27,23 +27,30 @@ const MianContent = () => {
 }
 
 
-const Home = ( { propertiesForRent , propertiesForSale}) =>  {
-  console.log("rent  " , propertiesForRent , )
+const Home = ({ propertiesForRent, propertiesForSale }) => {
+  console.log("rent  ", propertiesForRent, )
   return (
     <Box>
       <MianContent />
       <Flex flexWrap="wrap" justifyContent="center">
-        <PropertiesList/>
-        <PropertiesList/>
-        <PropertiesList/>
-        <PropertiesList/>
-        <PropertiesList/>
-        <PropertiesList/>
+
+        {propertiesForRent && propertiesForRent.map((property) => {
+          return (
+            <PropertiesList key={property} property={property} />
+          )
+        })}
+
+
       </Flex>
       <MianContent />
       <Flex flexWrap="wrap" justifyContent="center">
-      <PropertiesList/>
-     
+        {propertiesForSale && propertiesForSale.map((property) => {
+          return (
+            <PropertiesList key={property} property={property} />
+          )
+        })}
+
+
       </Flex>
 
     </Box>
@@ -56,8 +63,8 @@ export async function getStaticProps() {
   const propertyForRent = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-rent&hitsPerPage=6`);
   return {
     props: {
-      propertiesForSale: propertyForSale?.hits,
-      propertiesForRent: propertyForRent?.hits,
+      propertiesForSale: propertyForSale ?.hits,
+      propertiesForRent: propertyForRent ?.hits,
     },
   };
 }
