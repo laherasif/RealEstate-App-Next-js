@@ -10,7 +10,7 @@ import { millify } from 'millify';
 
 export default function PropertiesList({ property: { agency, rentFrequency , area, baths, rooms , title ,  coverPhoto, externalID, price, isVarified } }) {
     return (
-        <Link href={`/property/${123}`} passHref>
+        <Link href={`/property/${externalID}`} passHref>
             <Flex flexWrap='wrap' w='420px' p='5' paddingTop='0px' justifyContent='flex-start' cursor='pointer'>
                 <Box>
                 <Image src={coverPhoto ? coverPhoto.url : slider2} width={400} height={260} />
