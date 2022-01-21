@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar';
 import Image from 'next/image'
 import { Flex, Box, Text, Button } from '@chakra-ui/react'
 import Slider1 from '../assests/images/slider-1.jpg'
+import PropertiesList from '../components/PropertiesList';
 const MianContent = () => {
   return (
     <>
@@ -31,11 +32,12 @@ export default function Home() {
       <Navbar />
       <MianContent />
       <Flex>
-        property
+        <PropertiesList/>
       </Flex>
       <MianContent />
       <Flex>
-        property
+      <PropertiesList/>
+     
       </Flex>
 
     </Box>
