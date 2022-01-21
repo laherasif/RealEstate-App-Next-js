@@ -9,8 +9,6 @@ import { fetchApi , baseUrl } from '../ulit/api';
 export default function search({ properties }) {
     const [searchFilter, setSearchFilter] = useState()
     const router = useRouter()
-    
-    console.log("router", properties)
     return (
         <Box>
             <Flex justifyContent="center"
@@ -31,10 +29,10 @@ export default function search({ properties }) {
                 Property {router.query.purpose}
             </Text>
             <Flex flexWrap="wrap">
-                {[].map((property) => <PropertiesList property={property} key={property.id} />)}
+                {properties.map((property) => <PropertiesList property={property} key={property.id} />)}
             </Flex>
 
-            {[].length === 0 && (
+            {properties.length === 0 && (
                 <Text textAlign="center" fontSize="xl" fontWeight='medium'>
                     No Properties Here
                 </Text>
