@@ -56,7 +56,7 @@ const Home = ({ propertiesForRent, propertiesForSale }) => {
   )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const propertyForSale = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-sale&hitsPerPage=6`);
   const propertyForRent = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=5002&purpose=for-rent&hitsPerPage=6`);
   return {

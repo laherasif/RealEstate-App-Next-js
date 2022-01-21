@@ -19,7 +19,7 @@ export default function PropertiesList({ property: { agency, rentFrequency , are
                     <Flex flexWrap="wrap" alignItems="center" justifyContent="space-between">
                         <Flex alignItems="center" >
                             <Box color="green.400">{isVarified && <GoVerified />}</Box>
-                            <Text paddingLeft="2">PKR {price} {rentFrequency && `/${rentFrequency}`}</Text>
+                            <Text paddingLeft="2">PKR {millify(price)} {rentFrequency && `/${rentFrequency}`}</Text>
                         </Flex>
                         <Box >
                             <Avatar size="sm" src={agency?.logo?.url} />

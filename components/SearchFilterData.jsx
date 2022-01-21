@@ -104,8 +104,8 @@ export default function SearchFilterData() {
                     }
                     {loader && <Spinner margin="auto" marginTop="2" color="gray.500" />}
                     {showlocation &&
-                        <Box height="200px" overFlowY="scroll">
-                            {location?.map((location) => (
+                        <Box height="200px" overFlow="auto">
+                            {location && location.map((location) => (
                                 <Box
                                     key={location.id}
                                     onClick={() => {
