@@ -58,15 +58,19 @@ import {
     MdArrowDropDown,
     MdMenu
 } from 'react-icons/md';
+import Image from 'next/image'
+
+import logo from '../assests/images/logo.svg'
 
 export default function Navbar() {
     const { isOpen, onToggle } = useDisclosure();
 
     return (
-        <Box style={{backgroundColor:'red'}} >
+        <Box
+        >
             <Flex
-                bg={useColorModeValue('white', 'gray.800')}
-                color={useColorModeValue('gray.600', 'white')}
+              bg={useColorModeValue('white', 'gray.300')}
+               color={useColorModeValue('gray.600', 'white')}
                 minH={'60px'}
                 py={{ base: 2 }}
                 px={{ base: 4 }}
@@ -88,16 +92,19 @@ export default function Navbar() {
                     />
                 </Flex>
                 <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-                    <Text
+                    {/* <Text
                         textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
                         fontFamily={'heading'}
                         color={useColorModeValue('gray.800', 'white')}>
-                        Logo
-            </Text>
+                        
+                    </Text> */}
+                    {/* <Image src={logo} width={50} height={25} alt="logo"/> */}
+                    {logo}
 
                     <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
                         <DesktopNav />
                     </Flex>
+
                 </Flex>
 
                 <Stack

@@ -10,7 +10,7 @@ export default function Layout({children}) {
                 <title>Real Estate App</title>
             </Head>
             <Box>
-                <header>
+                <header >
                     <Navbar />
                 </header>
                 <main>
