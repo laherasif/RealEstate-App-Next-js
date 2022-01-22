@@ -2,6 +2,7 @@
 import { Flex, Box, Text } from '@chakra-ui/react'
 import PropertiesList from '../components/PropertiesList';
 import { baseUrl, fetchApi } from '../ulit/api'
+import Slider from '../components/Slider';
 const MianContent = () => {
   return (
     <>
@@ -16,6 +17,7 @@ const MianContent = () => {
 const Home = ({ propertiesForRent, propertiesForSale }) => {
   return (
     <Box>
+      <Slider/>
       <MianContent />
       <Flex flexWrap="wrap" justifyContent="center">
 

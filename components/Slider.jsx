@@ -9,20 +9,20 @@ import { Carousel } from 'react-responsive-carousel';
 export default function Slider() {
     return (
         <>
-            <Box w="100%" p="3" position='relative'>
                 <Carousel>
-                    <div>
-                        <Image w={1000} height={500} src={slider1} />
-                    </div>
-                    <div>
-                        <Image w={1000} height={500} src={slider2} />
-                    </div>
-                    <div>
-                        <Image w={1000} height={500} src={slider3} />
-                    </div>
+                    <Box>
+                        <Image w={1000} height={500} objectFit="cover" src={slider1} />
+                    </Box>
+                    <Box>
+                        <Image w={100} height={500} objectFit="cover" src={slider2} />
+                    </Box>
+                    <Box>
+                        <Image w={100} height={500} objectFit="cover" src={slider3} />
+                    </Box>
+
+
                 </Carousel>
 
-            </Box>
         </>
     )
 }
