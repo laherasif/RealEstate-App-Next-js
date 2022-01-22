@@ -50,7 +50,7 @@ export default function SearchFilterData() {
         <Flex bg='gray.100' p='4' flexWrap="wrap" justifyContent="center"  >
             {Filters.map((filter) => {
                 return (
-                    <Box>
+                    <Box key={filter.id}>
                         <Select
                             placeholder={filter.placeholder}
                             onChange={(e) => searchFilterValue({ [filter.queryName]: e.target.value })}

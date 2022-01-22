@@ -3,11 +3,11 @@ import { Flex, Box, Text } from '@chakra-ui/react'
 import PropertiesList from '../components/PropertiesList';
 import { baseUrl, fetchApi } from '../ulit/api'
 import Slider from '../components/Slider';
-const MianContent = () => {
+const MianContent = ({title}) => {
   return (
     <>
       <Flex flexWrap="wrap" justifyContent="center" textAlign="center" p="2" marginBottom="2" marginTop="2">
-          <Text color="black" fontWeight="bold" fontSize="4xl">Explore more </Text>
+        <Text color="black" fontWeight="bold" fontSize="4xl">{title} </Text>
       </Flex>
     </>
 
@@ -17,25 +17,29 @@ const MianContent = () => {
 const Home = ({ propertiesForRent, propertiesForSale }) => {
   return (
     <Box>
-      <Slider/>
-      <MianContent />
+      <Slider />
+      <MianContent  title={"Property For Rent "}/>
       <Flex flexWrap="wrap" justifyContent="center">
 
-        {propertiesForRent && propertiesForRent.map((property) => {
+        {propertiesForRent && propertiesForRent.length > 0 ? propertiesForRent.map((property) => {
           return (
             <PropertiesList key={property} property={property} />
           )
-        })}
+        })
+          : "loading"
+        }
 
 
       </Flex>
-      <MianContent />
+      <MianContent title={"Property For Sale "} />
       <Flex flexWrap="wrap" justifyContent="center">
-        {propertiesForSale && propertiesForSale.map((property) => {
+        {propertiesForSale && propertiesForSale.length > 0 ? propertiesForSale.map((property) => {
           return (
             <PropertiesList key={property} property={property} />
           )
-        })}
+        })
+          : 'loading'
+        }
 
 
       </Flex>
