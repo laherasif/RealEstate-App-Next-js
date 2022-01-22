@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { Box, Container } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 
 import Navbar from './Navbar'
 import Footer from './Footer';
@@ -13,6 +13,7 @@ export default function Layout({children}) {
             <Box>
                 <header >
                     <Navbar />
+                    
                 </header>
                 <main>
                     {children}
