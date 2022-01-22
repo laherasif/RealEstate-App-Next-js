@@ -1,20 +1,13 @@
 
-import Navbar from '../components/Navbar';
-// import Slider from '../components/Slider'
-import Image from 'next/image'
-import { Flex, Box, Text, Button } from '@chakra-ui/react'
-import Slider1 from '../assests/images/slider-1.jpg'
+import { Flex, Box, Text } from '@chakra-ui/react'
 import PropertiesList from '../components/PropertiesList';
 import { baseUrl, fetchApi } from '../ulit/api'
 const MianContent = () => {
   return (
     <>
-      <Flex flexWrap="wrap" justifyContent="center" textAlign="center" p="2">
-          <Text color="gray.400" fontWeight="medium" fontSize="sm">Explore more </Text>
+      <Flex flexWrap="wrap" justifyContent="center" textAlign="center" p="2" marginBottom="2" marginTop="2">
+          <Text color="black" fontWeight="bold" fontSize="4xl">Explore more </Text>
       </Flex>
-
-
-
     </>
 
   )
