@@ -55,7 +55,8 @@ import {
   import {
    MdClose,
    MdArrowForward,
-   MdArrowDropDown
+   MdArrowDropDown,
+   MdMenu
   } from 'react-icons/md';
   
   export default function Navbar() {
@@ -64,7 +65,7 @@ import {
     return (
       <Box>
         <Flex
-          bg={useColorModeValue('white', 'gray.800')}
+          bg={useColorModeValue('black', 'gray.800')}
           color={useColorModeValue('gray.600', 'white')}
           minH={'60px'}
           py={{ base: 2 }}
@@ -80,7 +81,7 @@ import {
             <IconButton
               onClick={onToggle}
               icon={
-                isOpen ? <MdClose w={3} h={3} /> : ""
+                isOpen ? <MdClose w={3} h={3} /> : <MdMenu/>
               }
               variant={'ghost'}
               aria-label={'Toggle Navigation'}
