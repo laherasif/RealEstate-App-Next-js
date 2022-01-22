@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { Box } from '@chakra-ui/react'
+import { Box, Container } from '@chakra-ui/react'
 
 import Navbar from './Navbar'
 
@@ -9,7 +9,7 @@ export default function Layout({children}) {
             <Head>
                 <title>Real Estate App</title>
             </Head>
-            <Box maxWidth="1280px" m="auto">
+            <Box>
                 <header>
                     <Navbar />
                 </header>
