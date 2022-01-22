@@ -58,7 +58,6 @@ import {
     MdArrowDropDown,
     MdMenu
 } from 'react-icons/md';
-import Image from 'next/image'
 
 import logo from '../assests/images/logo.svg'
 
@@ -92,14 +91,15 @@ export default function Navbar() {
                     />
                 </Flex>
                 <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-                    {/* <Text
+                    <Text
                         textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
                         fontFamily={'heading'}
+                        fontSize='lg'
+                        fontWeight="bold"
                         color={useColorModeValue('gray.800', 'white')}>
                         
-                    </Text> */}
-                    {/* <Image src={logo} width={50} height={25} alt="logo"/> */}
-                    {logo}
+                        Zameen.com
+            </Text>
 
                     <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
                         <DesktopNav />
